@@ -9,8 +9,8 @@ from utilities import get_valid_devices
 dir_path = 'Task example files'
 
 # define component pattern in file lines
-component_list = [Range_Component('Volt', Range.Range(0, 0), r"(\d+(?:\.\d+)?)\s*V\s*to\s*(\d+(?:\.\d+)?)\s*V"), 
-                  Range_Component('Temperature', Range.Range(0, 0), r"([-+]?\d+)[°�]C\s*to\s*([-+]?\d+)[°�]C")]
+component_list = [Range_Component('Volt', Range.Range(0, 0), r"(\d+(?:\.\d+)?)\s*V\s*to\s*(\d+(?:\.\d+)?)\s*V"), # '* V to * V'
+                  Range_Component('Temperature', Range.Range(0, 0), r"([-+]?\d+)[°�]C\s*to\s*([-+]?\d+)[°�]C")] # '*0C to *0C' - '0' means the little circle
 
 # analyze and save the devices into disk
 def analyze():
